@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StoreFront - Home</title>
     <style>
         * {
-            margin: 0 auto;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
@@ -16,15 +16,21 @@
             line-height: 1.6;
         }
 
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
         header {
             background-color: black;
             color: white;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
-            padding: 10px;
+            padding: 0.75rem 1rem;
+            gap: 1rem;
         }
 
         header .left-section {
@@ -35,15 +41,15 @@
 
         header .left-section .logo {
             color: rgb(236, 175, 60);
-            font-size: 25px;
+            font-size: 1.5rem;
             font-weight: bold;
+            display: none;
         }
 
         header .left-section .mobile-logo {
             color: rgb(236, 175, 60);
-            font-size: 25px;
+            font-size: 1.5rem;
             font-weight: bold;
-            display: none;
         }
 
         .middle-section {
@@ -51,17 +57,79 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            flex: 1;
         }
 
-        .middle-section #search {
+        .middle-section form {
+            display: flex;
+            width: 77%;
+        }
+
+        .middle-section input {
             padding: 12px;
             border-bottom-left-radius: 8px;
             border-top-left-radius: 8px;
             border: none;
+            flex: 1;
+        }
+
+        .middle-section input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgb(236, 175, 60);
+        }
+
+        .middle-section input::placeholder {
+            font-size: 14px;
         }
 
         .middle-section button {
-            
+            background-color: rgb(236, 175, 60);
+            border: none;
+            padding: 12px;
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+            cursor: pointer;
+        }
+
+        .right-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .right-section .cart-button {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .right-section .whilist {
+            cursor: pointer;
+        }
+
+        .right-section .cart-button .cart-quantity {
+            position: absolute;
+            top: -5px;
+            color: rgb(236, 175, 60);
+            font-weight: bold;
+            right: 10px;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+             header .left-section .logo {
+                color: rgb(236, 175, 60);
+                font-size: 25px;
+                font-weight: bold;
+                display: block;
+            }
+
+             header .left-section .mobile-logo {
+                color: rgb(236, 175, 60);
+                font-size: 25px;
+                font-weight: bold;
+                display: none;
+            }
         }
     </style>
 </head>
@@ -74,18 +142,21 @@
             </div>
 
             <div class="middle-section">
-                <input type="search" name="search" id="search">
-                <button>
-                    <img src="images/icons/search-icon.png" alt="search-icon">
-                </button>
+                <form action="">
+                    <input type="search" name="search" id="search" placeholder="Search for products...">
+                    <button>
+                        <img src="images/icons/search-icon.png" alt="search-icon" width="20">
+                    </button>
+                </form>
             </div>
 
             <div class="right-section">
                 <span class="whilist">
-                    <img src="images/icons/checkmark.png" alt="whilist-icon">
+                    <img src="images/icons/checkmark.png" alt="whilist-icon" width="30">
                 </span>
                 <span class="cart-button">
-                    <img src="images/icons/cart-icon.png" alt="">
+                    <img src="images/icons/cart-icon.png" alt="cart-icon" width="35">
+                    <span class="cart-quantity">0</span>
                 </span>
             </div>
         </header>
