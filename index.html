@@ -6,7 +6,37 @@
     <title>StoreFront - Home</title>
     <link rel="stylesheet" href="style.css">
     <style>
-       
+        .products {
+            padding: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            place-items: center;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: whitesmoke;
+            display: grid;
+            gap: 10px;
+            place-items: center;
+            padding: 8px;
+        }
+        
+        .product-image-container {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product img {
+            max-height: 90%;
+            max-width: 90%;
+        }
+
     </style>
 </head>
 <body>
@@ -40,7 +70,9 @@
         <div class="products">
             <div class="product-grid">
                 <div class="product">
-                    <img src="images/products/backpack.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/backpack.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -51,7 +83,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/men-athletic-shoes-green.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/men-athletic-shoes-green.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -62,7 +96,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/men-chino-pants-beige.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container"></div>
+                        <img src="images/products/men-chino-pants-beige.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -73,7 +109,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/kitchen-paper-towels-30-pack.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/kitchen-paper-towels-30-pack.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -84,7 +122,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/facial-tissue-2-ply-18-boxes.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/facial-tissue-2-ply-18-boxes.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -95,7 +135,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/countertop-blender-64-oz.jpg" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/countertop-blender-64-oz.jpg" alt="product-img" class="product-img" >
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
@@ -106,7 +148,9 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/products/blackout-curtain-set-beige.webp" alt="product-img" class="product-img" width="100">
+                    <div class="product-image-container">
+                        <img src="images/products/blackout-curtain-set-beige.webp" alt="product-img" class="product-img">
+                    </div>
                     <div class="description">
                         <span class="name">Leather Backpack</span>
                         <span class="price">$99.99</span>
