@@ -1,215 +1,229 @@
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    
+}
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+::-webkit-scrollbar {
+    display: none;
+}
 
-    .container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-    header {
-        background-color: black;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        padding: 0.75rem 1rem;
-        gap: 1rem;
-        margin-bottom: 50px;
-        position: fixed;
-        right: 0;
-        left: 0;
-        top: 0;
-        z-index: 0;
-    }
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
 
-    header .left-section {
-        display: flex;
-        gap: 1rem;
-        margin-left: 5px;
-    }
+header .left-section {
+    display: flex;
+    gap: 1rem;
+    margin-left: 5px;
+}
 
+header .left-section .logo {
+    color: rgb(236, 175, 60);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
+}
+
+header .left-section .mobile-logo {
+    color: rgb(236, 175, 60);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.middle-section form {
+    display: flex;
+    width: 70%;
+}
+
+.middle-section input {
+    padding: 12px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: none;
+    flex: 1;
+}
+
+.middle-section input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(236, 175, 60);
+}
+
+.middle-section input::placeholder {
+    font-size: 14px;
+}
+
+.middle-section button {
+    background-color: rgb(236, 175, 60);
+    border: none;
+    padding: 12px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-section .cart-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.right-section .whilist {
+    cursor: pointer;
+}
+
+.right-section .cart-button .cart-quantity {
+    position: absolute;
+    top: -5px;
+    color: rgb(236, 175, 60);
+    font-weight: bold;
+    right: 10px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
     header .left-section .logo {
         color: rgb(236, 175, 60);
-        font-size: 1.5rem;
+        font-size: 25px;
         font-weight: bold;
-        display: none;
+        display: block;
     }
 
     header .left-section .mobile-logo {
         color: rgb(236, 175, 60);
-        font-size: 1.5rem;
+        font-size: 25px;
         font-weight: bold;
+        display: none;
     }
+}
 
-    .middle-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        flex: 1;
-    }
+.products {
+    padding: 15px;
+    margin-top: 50px;
+}
 
-    .middle-section form {
-        display: flex;
-        width: 70%;
-    }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    place-items: center;
+}
 
-    .middle-section input {
-        padding: 12px;
-        border-bottom-left-radius: 8px;
-        border-top-left-radius: 8px;
-        border: none;
-        flex: 1;
-    }
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    place-items: center;
+    width: 350px;
+    padding: 40px 25px 25px 25px;
+    border: 1px solid rgb(131, 131, 131);
+}
 
-    .middle-section input:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px rgb(236, 175, 60);
-    }
+.product-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
 
-    .middle-section input::placeholder {
-        font-size: 14px;
-    }
+.product img {
+    max-height: 100%;
+    max-width: 100%;
+}
 
-    .middle-section button {
-        background-color: rgb(236, 175, 60);
-        border: none;
-        padding: 12px;
-        border-bottom-right-radius: 8px;
-        border-top-right-radius: 8px;
-        cursor: pointer;
-    }
+.product .description {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
 
-    .right-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    width: 250px;
+}
 
-    .right-section .cart-button {
-        position: relative;
-        cursor: pointer;
-    }
+.actions button {
+    background-color: rgb(236, 175, 60);
+    padding: 12px 20px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 13px;
+    cursor: pointer;
+}
 
-    .right-section .whilist {
-        cursor: pointer;
-    }
-
-    .right-section .cart-button .cart-quantity {
-        position: absolute;
-        top: -5px;
-        color: rgb(236, 175, 60);
-        font-weight: bold;
-        right: 10px;
-        font-size: 14px;
-    }
-
-    @media (min-width: 768px) {
-            header .left-section .logo {
-            color: rgb(236, 175, 60);
-            font-size: 25px;
-            font-weight: bold;
-            display: block;
-        }
-
-            header .left-section .mobile-logo {
-            color: rgb(236, 175, 60);
-            font-size: 25px;
-            font-weight: bold;
-            display: none;
-        }
-    }
-
-    .products {
-        padding: 15px;
-        margin-top: 60px;
-    }
-
+@media (min-width: 600px) {
     .product-grid {
-        display: grid;
-        grid-template-columns: repeat(1fr);
-        place-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: center;
+        justify-content: center; */
+        margin: 0;
     }
 
     .product {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        place-items: center;
-        width: 350px;
-        padding: 40px 25px 25px 25px;
-        border: 1px solid rgb(131, 131, 131);
+        width: 210px;
     }
-    
-    .product-image-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 180px;
-    }
+}
 
-    .product img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .product .description {
+@media (min-width: 768px) {
+    .product-grid {
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        font-size: 15px;
-        font-weight: bold;
-        letter-spacing: 1.2px;
     }
 
-    .actions {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 10px;
+    .product {
         width: 250px;
     }
-
-    .actions button {
-        background-color: rgb(236, 175, 60);
-        padding: 15px 24px;
-        border: none;
-        font-size: 15px;
-        font-weight: 600;
-        border-radius: 13px;
-        cursor: pointer;
-    }
-
-    @media (min-width: 600px) {
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            place-items: center;
-            width: 500px;
-            margin-left: 25px;
-        }
-
-        .product {
-            width: 300px;
-        }
-    }
+}
