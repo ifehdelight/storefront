@@ -197,17 +197,19 @@
         font-size: 15px;
         font-weight: 600;
         border-radius: 13px;
+        cursor: pointer;
     }
 
     @media (min-width: 600px) {
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(250px, 250px);
+            grid-template-columns: repeat(2,1fr);
             place-items: center;
-            /* width: 500px; */
+            width: 500px;
+            margin-left: 25px;
         }
 
-        /* .product {
+        .product {
             width: 300px;
-        } */
+        }
     }
