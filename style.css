@@ -204,8 +204,8 @@ header .left-section .mobile-logo {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        /* align-items: center;
-        justify-content: center; */
+        align-items: center;
+        justify-content: center;
         margin: 0;
     }
 
@@ -214,7 +214,7 @@ header .left-section .mobile-logo {
     }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .product-grid {
         display: flex;
         flex-direction: row;
@@ -226,4 +226,4 @@ header .left-section .mobile-logo {
     .product {
         width: 250px;
     }
-}
+} */
